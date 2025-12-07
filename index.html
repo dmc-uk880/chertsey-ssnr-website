@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chertsey S.S.N.R. Club - Soldiers, Sailors, National Reserve (Unofficial)</title>
+    <title>Chertsey SS&NR Club - Private Members' Club (Unofficial)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
     <style>
         /* ===== VARIABLES & BASE STYLES ===== */
         :root {
-            /* NEW COLORS BASED ON LOGO & Military/Reserve Theme */
+            /* COLORS BASED ON LOGO & Reserve Theme */
             --primary-color: #1a4f4f; /* Dark Teal/Navy Green (Primary Club Colour) */
             --secondary-color: #f1f0e8; /* Dignified Off-White/Cream (Accent) */
             --text-color: #333333;
@@ -40,7 +40,7 @@
             transition: color 0.3s;
         }
         a:hover {
-            color: #5aa4a4; /* Slightly lighter teal on hover */
+            color: #5aa4a4; 
         }
 
         /* ===== HEADER / NAVIGATION ===== */
@@ -92,7 +92,6 @@
             bottom: -5px;
             width: 0;
             height: 2px;
-            /* White/Cream accent for underline */
             background: var(--secondary-color);
             transition: width 0.3s;
         }
@@ -103,7 +102,6 @@
 
         /* Unofficial Banner */
         .unofficial-banner {
-            /* Primary colour on the accent background */
             background: var(--secondary-color);
             color: var(--primary-color);
             text-align: center;
@@ -154,7 +152,6 @@
         
         .btn-primary {
             display: inline-block;
-            /* Primary colour with a lighter background for the button */
             background: var(--primary-color);
             color: white;
             padding: 12px 25px;
@@ -166,7 +163,7 @@
         }
 
         .btn-primary:hover {
-            background: #5aa4a4; /* Lighter shade of primary colour on hover */
+            background: #5aa4a4; 
             color: white;
         }
 
@@ -185,11 +182,31 @@
         .section-heading h2 {
             font-size: 2.5em;
             padding-bottom: 5px;
-            /* Accent colour for border */
             border-bottom: 4px solid var(--secondary-color);
             display: inline-block;
             color: var(--primary-color);
         }
+        
+        /* New: Features Grid */
+        .features-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            flex-basis: 30%; /* Three items per row */
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: var(--secondary-color);
+            font-weight: 700;
+            color: var(--primary-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
 
         /* ===== EVENTS LAYOUT (Grid) ===== */
         #events {
@@ -208,7 +225,6 @@
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s;
-            /* Accent colour for top border */
             border-top: 5px solid var(--secondary-color);
         }
 
@@ -243,7 +259,6 @@
             object-fit: cover;
             border-radius: 8px;
             display: block;
-            /* Accent border */
             box-shadow: 0 0 0 3px var(--secondary-color), 0 2px 4px rgba(0,0,0,0.1); 
             transition: transform 0.3s;
         }
@@ -325,18 +340,21 @@
             .hero {
                 background-position: center;
             }
+            .feature-item {
+                flex-basis: 100%; /* Stack features on small screens */
+            }
         }
     </style>
 </head>
 <body>
     <div class="unofficial-banner">
-        ⚠️ This is an **UNOFFICIAL** fan-made community page. Find the official group here: <a href="https://www.facebook.com/ssnrclub" target="_blank" style="color: black; text-decoration: underline;">Chertsey SSNR Facebook</a> 
+        ⚠️ This is an **UNOFFICIAL** fan-made community page. Find the official group here: <a href="https://www.facebook.com/ssnrclub" target="_blank" style="color: black; text-decoration: underline;">Chertsey SS&NR Facebook</a> 
     </div>
 
     <header>
         <div class="logo-container">
-            <img src="http://googleusercontent.com/image_generation_content/0" alt="Chertsey SSNR Club Logo" class="club-logo">
-            <span class="logo-text">CHERTSEY S.S.N.R.</span>
+            <img src="http://googleusercontent.com/image_generation_content/0" alt="Chertsey SS&NR Club Logo" class="club-logo">
+            <span class="logo-text">CHERTSEY SS&NR</span>
         </div>
         <nav>
             <a href="#about">About</a>
@@ -349,9 +367,9 @@
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h2>Chertsey S.S.N.R. Club</h2>
-            <p>Home for our **Soldiers, Sailors, and National Reserve** community.</p>
-            <a href="#events" class="btn-primary">See Upcoming Events</a>
+            <h2>Chertsey SS&NR Club</h2>
+            <p>Your local **Private Members' Club** since 1922.</p>
+            <a href="#about" class="btn-primary">Discover Our Facilities</a>
         </div>
     </section>
 
@@ -360,13 +378,25 @@
             <h2>About The Club</h2>
         </div>
         <p>
-            The Chertsey S.S.N.R. Club, standing for **Soldiers, Sailors, and National Reserve**, serves as a dedicated social hub for veterans, service personnel, and the wider Chertsey community. We are proud of our heritage and strive to provide a supportive, welcoming environment.
+            The Chertsey **SS&NR Club** is a long-standing **Private Members' Club**, proudly serving the community and those connected to the Soliders, Sailors, and National Reserve heritage since the early 20th century. We are dedicated to providing a high-quality, welcoming social environment.
         </p>
+
         <p>
-            We host a variety of activities, including social nights, celebratory functions, and community events, maintaining the tradition of fellowship and camaraderie associated with the services. Our mission is to ensure the club remains a thriving, affordable, and accessible resource for all members.
-            **This page is an unofficial fan-made resource to highlight the club's activities.**
+            Our spacious and well-maintained facilities make us the perfect location for socializing, entertainment, and private functions. Visitors can expect fantastic value across our well-stocked bar and enjoy the traditional, friendly atmosphere that defines our club.
         </p>
+
+        <h3>Club Facilities include:</h3>
+        <div class="features-grid">
+            <div class="feature-item">Large Seated Area</div>
+            <div class="feature-item">Room for Hire</div>
+            <div class="feature-item">Snooker Area</div>
+            <div class="feature-item">Outdoor Garden & BBQ</div>
+            <div class="feature-item">Dedicated Darts Area</div>
+            <div class="feature-item">Large Screen Sports (Big Games)</div>
+        </div>
     </div>
+
+    <hr/>
 
     <div class="container" id="events">
         <div class="section-heading">
@@ -395,9 +425,11 @@
             </div>
         </div>
         <p style="text-align: center; margin-top: 30px;">
-            For the most up-to-date schedule, please check the <a href="https://www.facebook.com/ssnrclub" target="_blank">official SSNR Facebook page</a>.
+            For the most up-to-date schedule, please check the <a href="https://www.facebook.com/ssnrclub" target="_blank">official SS&NR Facebook page</a>.
         </p>
     </div>
+
+    <hr/>
 
     <div class="container" id="gallery">
         <div class="section-heading">
@@ -406,18 +438,20 @@
         <div class="gallery-grid">
             <img src="http://googleusercontent.com/image_generation_content/0" alt="Club Bar Area" />
             
-            <img src="https://via.placeholder.com/400x300/1a4f4f/f1f0e8?text=Darts+Board" alt="Darts Board" />
-            <img src="https://via.placeholder.com/400x300/f1f0e8/1a4f4f?text=Remembrance+Display" alt="Remembrance Display" />
-            <img src="https://via.placeholder.com/400x300/1a4f4f/f1f0e8?text=Hall+for+Hire" alt="Hall for Hire" />
+            <img src="https://via.placeholder.com/400x300/1a4f4f/f1f0e8?text=Snooker+Room" alt="Snooker Room" />
+            <img src="https://via.placeholder.com/400x300/f1f0e8/1a4f4f?text=Function+Room+Setup" alt="Function Room Setup" />
+            <img src="https://via.placeholder.com/400x300/1a4f4f/f1f0e8?text=Outdoor+Garden+Area" alt="Outdoor Garden Area" />
         </div>
     </div>
+
+    <hr/>
 
     <div class="container" id="contact">
         <div class="section-heading">
             <h2>Get In Touch</h2>
         </div>
         <form>
-            <p>Got a suggestion for this unofficial site, or a question for the club? Use the form below! **(For official club booking/queries, please use the Facebook link.)**</p>
+            <p>Got a suggestion for this unofficial site, or a question? Use the form below! **(For official club booking/membership queries, please use the Facebook link.)**</p>
             <label for="name">Your Name</label>
             <input type="text" id="name" placeholder="Your Name" required />
             
@@ -432,8 +466,8 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 Chertsey S.S.N.R. Community Page.</p>
-        <p>This is an unofficial community resource. **S.S.N.R. stands for Soldiers, Sailors, and National Reserve.**</p>
+        <p>&copy; 2026 Chertsey SS&NR Community Page.</p>
+        <p>This is an **unofficial** community resource. **SS&NR stands for Soldiers, Sailors, & National Reserve.**</p>
         <p><a href="https://www.facebook.com/ssnrclub" target="_blank" style="color: #f1f0e8;">Visit the Official Facebook Page</a></p>
     </footer>
 
