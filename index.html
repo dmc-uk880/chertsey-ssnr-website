@@ -10,9 +10,8 @@
     <style>
         /* ===== VARIABLES & BASE STYLES ===== */
         :root {
-            /* COLORS BASED ON LOGO & Reserve Theme */
-            --primary-color: #1a4f4f; /* Dark Teal/Navy Green (Primary Club Colour) */
-            --secondary-color: #f1f0e8; /* Dignified Off-White/Cream (Accent) */
+            --primary-color: #1a4f4f; /* Dark Teal/Navy Green */
+            --secondary-color: #f1f0e8; /* Dignified Off-White/Cream */
             --text-color: #333333;
             --light-bg: #ffffff;
             --dark-bg: #f4f7f6;
@@ -43,7 +42,6 @@
             color: #5aa4a4; 
         }
 
-        /* ===== HEADER / NAVIGATION ===== */
         header {
             background: var(--primary-color);
             padding: 10px 20px;
@@ -100,7 +98,6 @@
             width: 100%;
         }
 
-        /* Unofficial Banner */
         .unofficial-banner {
             background: var(--secondary-color);
             color: var(--primary-color);
@@ -110,9 +107,7 @@
             font-weight: 700;
         }
 
-        /* ===== HERO SECTION (Using the Bar Image: bar.png) ===== */
         .hero {
-            /* USING bar.png */
             background: url('bar.png') center top/cover no-repeat;
             color: white;
             padding: 120px 20px 80px;
@@ -121,7 +116,6 @@
         }
         
         .hero-overlay {
-            /* Dark overlay for text contrast */
             background: rgba(0, 0, 0, 0.55); 
             position: absolute;
             top: 0;
@@ -162,12 +156,6 @@
             transition: background 0.3s;
         }
 
-        .btn-primary:hover {
-            background: #5aa4a4; 
-            color: white;
-        }
-
-        /* ===== MAIN CONTENT LAYOUT ===== */
         .container {
             max-width: 1100px;
             margin: 40px auto;
@@ -186,8 +174,16 @@
             display: inline-block;
             color: var(--primary-color);
         }
+
+        .facebook-feed-container {
+            max-width: 600px;
+            margin: 20px auto 40px auto;
+            background: var(--light-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
         
-        /* Features Grid */
         .features-grid {
             display: flex;
             flex-wrap: wrap;
@@ -205,63 +201,7 @@
             color: var(--primary-color);
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        
-        .contact-info-box {
-            background: var(--light-bg);
-            border-left: 5px solid var(--primary-color);
-            padding: 20px;
-            margin-top: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .contact-info-box p {
-            margin: 5px 0;
-        }
-        .contact-info-box strong {
-            color: var(--primary-color);
-        }
 
-
-        /* ===== EVENTS LAYOUT (Grid) ===== */
-        #events {
-            padding: 40px 0;
-        }
-
-        .events-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .event-card {
-            background: var(--light-bg);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            border-top: 5px solid var(--secondary-color);
-        }
-
-        .event-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-        }
-
-        .event-card h3 {
-            margin-top: 0;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            font-size: 1.5em;
-        }
-
-        .event-card strong {
-            color: var(--primary-color);
-            font-weight: 700;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        /* ===== GALLERY LAYOUT (Flex/Grid) ===== */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -277,51 +217,30 @@
             transition: transform 0.3s;
         }
         
-        .gallery-grid img:hover {
-            transform: scale(1.03);
-        }
-
-        /* ===== FOOTER ===== */
         footer {
             background: var(--primary-color);
             color: white;
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
             margin-top: 60px;
-            font-size: 0.9em;
+            font-size: 0.95em;
         }
         
-        footer p {
-            margin: 5px 0;
-        }
-        
-        /* Media Queries for Responsiveness */
+        footer p { margin: 8px 0; }
+
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 15px 20px;
-            }
-            nav {
-                margin-top: 10px;
-            }
-            nav a {
-                margin: 0 10px;
-            }
-            .hero h2 {
-                font-size: 3em;
-            }
-            .hero {
-                background-position: center;
-            }
-            .feature-item {
-                flex-basis: 100%; /* Stack features on small screens */
-            }
+            header { flex-direction: column; }
+            .hero h2 { font-size: 3em; }
+            .feature-item { flex-basis: 100%; }
         }
     </style>
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v18.0"></script>
+
     <div class="unofficial-banner">
-        ⚠️ This is an UNOFFICIAL fan-made community page. Find the official group here: <a href="https://www.facebook.com/ssnrclub" target="_blank" style="color: black; text-decoration: underline;">Chertsey SS&NR Facebook</a>
+        ⚠️ This is an UNOFFICIAL fan-made community page. Official group: <a href="https://www.facebook.com/ssnrclub" target="_blank" style="color: black; text-decoration: underline;">Chertsey SS&NR Facebook</a>
     </div>
 
     <header>
@@ -330,10 +249,9 @@
             <span class="logo-text">CHERTSEY SS&NR</span>
         </div>
         <nav>
+            <a href="#news">News</a>
             <a href="#about">About</a>
-            <a href="#events">Events</a>
             <a href="#gallery">Gallery</a>
-            <a href="#contact-details">Contact</a>
         </nav>
     </header>
 
@@ -341,95 +259,63 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h2>Chertsey SS&NR Club</h2>
-            <p>Your local Private Members' Club in the heart of Chertsey.</p>
-            <a href="#about" class="btn-primary">Discover Our Facilities</a>
+            <p>A private members social club offering a broad range of entertainment for all.</p>
+            <a href="#about" class="btn-primary">Our Facilities</a>
         </div>
     </section>
+
+    <div class="container" id="news">
+        <div class="section-heading">
+            <h2>Latest Club News</h2>
+        </div>
+        <div class="facebook-feed-container">
+            <div class="fb-page" data-href="https://www.facebook.com/ssnrclub" data-tabs="timeline" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/ssnrclub" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/ssnrclub">Chertsey SS&NR Club</a>
+                </blockquote>
+            </div>
+        </div>
+    </div>
 
     <div class="container" id="about">
         <div class="section-heading">
             <h2>About The Club</h2>
         </div>
-        <p>
-            The Chertsey SS&NR Club is a long-standing Private Members' Club, proudly serving the community and honouring its heritage of the **Soldiers, Sailors, & National Reserve**. We are dedicated to providing a high-quality, welcoming social environment.
-        </p>
+        <p>The Chertsey SS&NR Club is a private members social club, honouring the heritage of the Soldiers, Sailors, & National Reserve. We provide a welcoming environment for all our members.</p>
+        
+        <p>Our facilities are perfect for socialising and private functions, featuring a well-stocked bar and a traditional atmosphere. We are easily accessible with a private car park.</p>
 
-        <p>
-            Our spacious and well-maintained facilities make us the perfect location for socialising, entertainment, and private functions. Visitors can expect fantastic value across our well-stocked bar and enjoy the traditional, friendly atmosphere that defines our club. We are easily accessible and have a private car park.
-        </p>
-
-        <h3>Club Facilities include:</h3>
         <div class="features-grid">
             <div class="feature-item">Large Seated Area</div>
             <div class="feature-item">Room for Hire</div>
             <div class="feature-item">Snooker Area</div>
             <div class="feature-item">Outdoor Garden & BBQ</div>
             <div class="feature-item">Dedicated Darts Area</div>
-            <div class="feature-item">Large Screen Sports (Big Games)</div>
-        </div>
-
-        <div class="contact-info-box" id="contact-details">
-            <h3>Official Club Contact Information</h3>
-            <p><strong>Address:</strong> Heriot Road, Chertsey, United Kingdom</p>
-            <p><strong>Phone:</strong> 01932 562567</p>
-            <p><strong>Email:</strong> <a href="mailto:secretary.ssnr@btconnect.com">secretary.ssnr@btconnect.com</a></p>
-            <p>Please use these details for all official membership and booking enquiries.</p>
+            <div class="feature-item">Private Car Park</div>
         </div>
     </div>
-
-    <hr/>
-
-    <div class="container" id="events">
-        <div class="section-heading">
-            <h2>Current and Upcoming Events</h2>
-        </div>
-        <div class="events-grid">
-            <div class="event-card">
-                <h3>Kids Christmas Party</h3>
-                <p><strong>Date:</strong> Sunday, 21st December 2025</p>
-                <p><strong>Time:</strong> 14:00 GMT</p>
-                <p>Location: Chertsey, Surrey</p>
-                <p>A fun-filled festive afternoon for all the young members and their families!</p>
-            </div>
-
-            <div class="event-card">
-                <h3>New Year Party</h3>
-                <p><strong>Date:</strong> Wednesday, 31st December 2025</p>
-                <p><strong>Time:</strong> 18:00 GMT onwards</p>
-                <p>Location: Heriot Road, Chertsey</p>
-                <p>Ring in the New Year with music, drinks, and friends at the club!</p>
-            </div>
-
-            <div class="event-card" style="visibility: hidden; height: 0;"></div>
-        </div>
-        <p style="text-align: center; margin-top: 30px;">
-            For the most up-to-date schedule and event details, please check the <a href="https://www.facebook.com/ssnrclub" target="_blank">official SS&NR Facebook page</a>.
-        </p>
-    </div>
-
-    <hr/>
 
     <div class="container" id="gallery">
         <div class="section-heading">
-            <h2>Photos from the Club</h2>
+            <h2>Club Gallery</h2>
         </div>
         <div class="gallery-grid">
             <img src="bar.png" alt="Club Bar Area" />
-            <img src="outside.png" alt="Outside View" />
+            <img src="https://via.placeholder.com/400x300/1a4f4f/f1f0e8?text=Snooker+Room" alt="Snooker Room" />
+            <img src="https://via.placeholder.com/400x300/f1f0e8/1a4f4f?text=Function+Room" alt="Function Room" />
+            <img src="https://via.placeholder.com/400x300/1a4f4f/f1f0e8?text=Garden+Area" alt="Garden Area" />
         </div>
     </div>
 
-    <hr/>
-
     <footer>
-        <p>&copy; 2025 Chertsey SS&NR Community Page.</p>
-        <p>This is an unofficial community resource.</p>
-        <p>
-            <strong>Official Club Details:</strong>
-            <br>Heriot Road, Chertsey | Phone: 01932 562567
-        </p>
-        <p><a href="https://www.facebook.com/ssnrclub" target="_blank" style="color: #f1f0e8;">Visit the Official Facebook Page</a></p>
+        <h3>Official Club Contact Information</h3>
+        <p><strong>Address:</strong> Heriot Road, Chertsey, United Kingdom</p>
+        <p><strong>Phone:</strong> 01932 562567</p>
+        <p><strong>Email:</strong> <a href="mailto:secretary.ssnr@btconnect.com" style="color: #f1f0e8;">secretary.ssnr@btconnect.com</a></p>
+        <br>
+        <p>&copy; 2026 Chertsey SS&NR Community Page.</p>
+        <p><a href="https://www.facebook.com/ssnrclub" target="_blank" style="color: #f1f0e8; text-decoration: underline;">Official Facebook Page</a></p>
     </footer>
-
 </body>
 </html>
+
